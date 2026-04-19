@@ -56,25 +56,25 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-3 group">
             {LOGO_URL ? (
               <Image
                 src={LOGO_URL}
                 alt="Village Organic"
-                width={44}
-                height={44}
-                className="rounded-full object-contain"
+                width={60}
+                height={60}
+                className="rounded-full object-contain w-11 h-11 md:w-[60px] md:h-[60px]"
                 unoptimized
               />
             ) : (
-              <div className="w-11 h-11 rounded-full bg-forest-700 flex items-center justify-center">
+              <div className="w-11 h-11 md:w-[60px] md:h-[60px] rounded-full bg-forest-700 flex items-center justify-center">
                 <Leaf size={22} className="text-cream" />
               </div>
             )}
             <div>
-              <span className="font-serif font-bold text-lg text-forest-800 leading-none block">
+              <span className="font-serif font-bold text-lg md:text-xl text-forest-800 leading-none block">
                 Village Organic
               </span>
               <span className="text-[10px] text-sage tracking-widest uppercase font-sans">

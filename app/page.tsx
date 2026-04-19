@@ -26,7 +26,7 @@ const categories = [
     id: "fresh",
     label: "Fresh Foods",
     sub: "Fruits, Vegetables & Exotics",
-    img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/fresh-foods",
     accent: "from-green-900/80",
   },
@@ -34,7 +34,7 @@ const categories = [
     id: "chilled",
     label: "Chilled Foods",
     sub: "Dairy, Meat & Ready Meals",
-    img: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/chilled-foods",
     accent: "from-blue-900/80",
   },
@@ -42,7 +42,7 @@ const categories = [
     id: "frozen",
     label: "Frozen Foods",
     sub: "Ice Cream, Meals & Plant-Based",
-    img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/frozen-foods",
     accent: "from-cyan-900/80",
   },
@@ -50,7 +50,7 @@ const categories = [
     id: "cupboard",
     label: "Food Cupboard",
     sub: "Pantry Staples, Snacks & Cereals",
-    img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1505935428862-770b6f24f629?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/food-drink",
     accent: "from-amber-900/80",
   },
@@ -58,7 +58,7 @@ const categories = [
     id: "health",
     label: "Health & Wellbeing",
     sub: "Supplements & Wellness",
-    img: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/health-beauty",
     accent: "from-emerald-900/80",
   },
@@ -66,7 +66,7 @@ const categories = [
     id: "beauty",
     label: "Beauty & Personal Care",
     sub: "Skin, Hair & Dental Care",
-    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/beauty-personal-care",
     accent: "from-rose-900/80",
   },
@@ -74,7 +74,7 @@ const categories = [
     id: "household",
     label: "Household & Pets",
     sub: "Cleaning, Kitchen & Pets",
-    img: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/household-pets",
     accent: "from-orange-900/80",
   },
@@ -82,7 +82,7 @@ const categories = [
     id: "beverages",
     label: "Beverages",
     sub: "Tea, Coffee, Juices & More",
-    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/soft-drinks-teas-coffee",
     accent: "from-yellow-900/80",
   },
@@ -106,20 +106,21 @@ export default function Home() {
 
       {/* ── HERO: video only ── */}
       <section className="relative h-screen overflow-hidden">
+        {/* Mobile video */}
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="https://res.cloudinary.com/dttc5xk1h/video/upload/so_0/v1776607607/download_ogncot.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay muted loop playsInline
+          className="absolute inset-0 w-full h-full object-cover md:hidden"
         >
-          <source
-            src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776607607/download_ogncot.mp4"
-            type="video/mp4"
-          />
+          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776627767/download_1_iusrcl.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-forest-900/35" />
+        {/* Desktop video */}
+        <video
+          autoPlay muted loop playsInline
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        >
+          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776627832/kling_20260419_%E4%BD%9C%E5%93%81__Cinematic_5536_0_mzuhjf.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-forest-900/30" />
         <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-cream to-transparent" />
       </section>
 

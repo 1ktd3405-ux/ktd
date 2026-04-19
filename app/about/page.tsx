@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { Leaf, Heart, Sprout, Users, ArrowRight, ShoppingBag } from "lucide-react";
+import { Heart, Sprout, Users, ArrowRight, ShoppingBag } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -22,11 +22,6 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
 }
 
 const values = [
-  {
-    icon: <Leaf size={24} />,
-    title: "100% Certified Organic",
-    desc: "Every product on our shelves meets strict organic certification standards. No shortcuts, no compromises.",
-  },
   {
     icon: <Heart size={24} />,
     title: "All Diets, All People",
