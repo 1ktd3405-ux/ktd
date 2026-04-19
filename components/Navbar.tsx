@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf, Phone, ShoppingBag } from "lucide-react";
+import { Menu, X, Phone, ShoppingBag, Leaf } from "lucide-react";
+
+const LOGO_URL = ""; // Cloudinary logo URL buraya
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -56,9 +59,20 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-full bg-forest-700 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <Leaf size={18} className="text-cream" />
-            </div>
+            {LOGO_URL ? (
+              <Image
+                src={LOGO_URL}
+                alt="Village Organic"
+                width={44}
+                height={44}
+                className="rounded-full object-contain"
+                unoptimized
+              />
+            ) : (
+              <div className="w-11 h-11 rounded-full bg-forest-700 flex items-center justify-center">
+                <Leaf size={22} className="text-cream" />
+              </div>
+            )}
             <div>
               <span className="font-serif font-bold text-lg text-forest-800 leading-none block">
                 Village Organic

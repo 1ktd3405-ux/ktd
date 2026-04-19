@@ -78,16 +78,24 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-forest-900">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10"
+        {/* Video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="https://res.cloudinary.com/dttc5xk1h/video/upload/so_0/v1776607607/download_ogncot.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776607607/download_ogncot.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-forest-900/70" />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #8B9D5C 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, #D4A853 0%, transparent 40%)`,
-          }}
-        />
-        <div className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+            backgroundImage: `radial-gradient(circle at 20% 50%, #2D5016 0%, transparent 60%),
+                              radial-gradient(circle at 80% 20%, #111f0b 0%, transparent 50%)`,
           }}
         />
 
