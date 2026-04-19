@@ -94,7 +94,7 @@ export default function AboutPage() {
           <Reveal>
             <motion.p variants={fadeUp} className="text-sage text-sm font-medium tracking-widest uppercase mb-4">The Village Organic Story</motion.p>
             <motion.h2 variants={fadeUp} className="font-serif text-4xl font-bold text-forest-900 mb-6">
-              London's Home for Organic Living
+              Your Home for Organic Living
             </motion.h2>
             <motion.p variants={fadeUp} className="text-earth leading-relaxed mb-4 text-lg">
               Village Organic started with a simple idea: that eating well shouldn't be complicated, exclusive, or joyless. We wanted to create spaces where people could discover organic food in a warm, welcoming environment — staffed by people who actually know what they're talking about.
