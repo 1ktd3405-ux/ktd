@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { Leaf, ShoppingBag, MapPin, ArrowRight, Truck, Heart, Sprout } from "lucide-react";
+import { Leaf, ShoppingBag, MapPin, ArrowRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -26,7 +26,7 @@ const categories = [
     id: "fresh",
     label: "Fresh Foods",
     sub: "Fruits, Vegetables & Exotics",
-    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/fresh-foods",
     accent: "from-green-900/80",
   },
@@ -34,7 +34,7 @@ const categories = [
     id: "chilled",
     label: "Chilled Foods",
     sub: "Dairy, Meat & Ready Meals",
-    img: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/chilled-foods",
     accent: "from-blue-900/80",
   },
@@ -42,7 +42,7 @@ const categories = [
     id: "frozen",
     label: "Frozen Foods",
     sub: "Ice Cream, Meals & Plant-Based",
-    img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/frozen-foods",
     accent: "from-cyan-900/80",
   },
@@ -50,7 +50,7 @@ const categories = [
     id: "cupboard",
     label: "Food Cupboard",
     sub: "Pantry Staples, Snacks & Cereals",
-    img: "https://images.unsplash.com/photo-1505935428862-770b6f24f629?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/food-drink",
     accent: "from-amber-900/80",
   },
@@ -58,7 +58,7 @@ const categories = [
     id: "health",
     label: "Health & Wellbeing",
     sub: "Supplements & Wellness",
-    img: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/health-beauty",
     accent: "from-emerald-900/80",
   },
@@ -66,7 +66,7 @@ const categories = [
     id: "beauty",
     label: "Beauty & Personal Care",
     sub: "Skin, Hair & Dental Care",
-    img: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/beauty-personal-care",
     accent: "from-rose-900/80",
   },
@@ -74,7 +74,7 @@ const categories = [
     id: "household",
     label: "Household & Pets",
     sub: "Cleaning, Kitchen & Pets",
-    img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&q=80",
     href: "https://wholefoodsbox.co.uk/collections/household-pets",
     accent: "from-orange-900/80",
   },
@@ -94,38 +94,25 @@ const stores = [
   { name: "Caledonian Road", address: "210 Caledonian Road", postcode: "London N1 0SQ" },
 ];
 
-const trustBadges = [
-  { icon: <Truck size={20} />, label: "Free Delivery", sub: "On orders over £60" },
-  { icon: <Heart size={20} />, label: "All Diets Welcome", sub: "Vegan, veggie & more" },
-  { icon: <Sprout size={20} />, label: "Sustainably Sourced", sub: "Earth-first choices" },
-];
-
 export default function Home() {
   return (
     <div className="bg-cream overflow-x-hidden">
 
-      {/* ── HERO: video only ── */}
-      <section className="relative h-screen overflow-hidden">
-        {/* Mobile video */}
+      {/* ── HERO: video only, no crop ── */}
+      <section className="relative bg-forest-950 overflow-hidden">
         <video
-          autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover md:hidden"
+          autoPlay
+          muted
+          playsInline
+          className="w-full block"
         >
-          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776627767/download_1_iusrcl.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
         </video>
-        {/* Desktop video */}
-        <video
-          autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        >
-          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776627832/kling_20260419_%E4%BD%9C%E5%93%81__Cinematic_5536_0_mzuhjf.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-forest-900/30" />
-        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-cream to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent pointer-events-none" />
       </section>
 
       {/* ── SHOP NOW (below hero) ── */}
-      <section className="bg-cream pt-4 pb-16">
+      <section className="bg-cream pt-8 pb-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -138,7 +125,7 @@ export default function Home() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-5"
+              className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-4"
             >
               <Leaf size={11} />
               Organic Food Specialists · Est. London
@@ -147,10 +134,6 @@ export default function Home() {
               Good Food.<br />
               <span className="text-honey">Good Life.</span>
             </h1>
-            <p className="text-earth text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              Whether you&apos;re starting your wellness journey or a seasoned health enthusiast —
-              Village Organic is your home. Three London stores and delivery nationwide.
-            </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="https://wholefoodsbox.co.uk"
@@ -173,34 +156,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TRUST BADGES ── */}
-      <section className="bg-parchment py-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-4 sm:gap-8">
-            {trustBadges.map((b, i) => (
-              <motion.div
-                key={b.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-center text-center gap-2"
-              >
-                <div className="w-10 h-10 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center">
-                  {b.icon}
-                </div>
-                <div>
-                  <p className="font-semibold text-xs sm:text-sm text-bark">{b.label}</p>
-                  <p className="text-[11px] sm:text-xs text-earth mt-0.5">{b.sub}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── CATEGORIES ── */}
-      <section className="bg-cream py-24">
+      <section className="bg-cream pt-4 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Section>
             <motion.div variants={fadeUp} className="text-center mb-12">
