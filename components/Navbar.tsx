@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ShoppingBag, Leaf } from "lucide-react";
 
-const LOGO_URL = ""; // Cloudinary logo URL buraya
+const LOGO_URL = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
