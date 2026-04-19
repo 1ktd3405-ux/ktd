@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { Leaf, ShoppingBag, MapPin, ArrowRight, Truck, Shield, Heart, Sprout } from "lucide-react";
+import { Leaf, ShoppingBag, MapPin, ArrowRight, Truck, Heart, Sprout } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -26,40 +26,40 @@ const categories = [
     id: "fresh",
     label: "Fresh Foods",
     sub: "Fruits, Vegetables & Exotics",
-    img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/fresh-foods",
     accent: "from-green-900/80",
   },
   {
     id: "chilled",
     label: "Chilled Foods",
     sub: "Dairy, Meat & Ready Meals",
-    img: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/chilled-foods",
     accent: "from-blue-900/80",
   },
   {
     id: "frozen",
     label: "Frozen Foods",
     sub: "Ice Cream, Meals & Plant-Based",
-    img: "https://images.unsplash.com/photo-1571104508999-893933ded431?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/frozen-foods",
     accent: "from-cyan-900/80",
   },
   {
     id: "cupboard",
     label: "Food Cupboard",
     sub: "Pantry Staples, Snacks & Cereals",
-    img: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/food-drink",
     accent: "from-amber-900/80",
   },
   {
     id: "health",
     label: "Health & Wellbeing",
     sub: "Supplements & Wellness",
-    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/health-beauty",
     accent: "from-emerald-900/80",
   },
   {
@@ -67,23 +67,23 @@ const categories = [
     label: "Beauty & Personal Care",
     sub: "Skin, Hair & Dental Care",
     img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    href: "https://wholefoodsbox.co.uk/collections/beauty-personal-care",
     accent: "from-rose-900/80",
   },
   {
     id: "household",
     label: "Household & Pets",
     sub: "Cleaning, Kitchen & Pets",
-    img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/household-pets",
     accent: "from-orange-900/80",
   },
   {
     id: "beverages",
     label: "Beverages",
     sub: "Tea, Coffee, Juices & More",
-    img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80",
-    href: "https://wholefoodsbox.co.uk",
+    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+    href: "https://wholefoodsbox.co.uk/collections/soft-drinks-teas-coffee",
     accent: "from-yellow-900/80",
   },
 ];
@@ -96,7 +96,6 @@ const stores = [
 
 const trustBadges = [
   { icon: <Truck size={20} />, label: "Free Delivery", sub: "On orders over £60" },
-  { icon: <Shield size={20} />, label: "100% Organic", sub: "Certified products only" },
   { icon: <Heart size={20} />, label: "All Diets Welcome", sub: "Vegan, veggie & more" },
   { icon: <Sprout size={20} />, label: "Sustainably Sourced", sub: "Earth-first choices" },
 ];
@@ -105,78 +104,78 @@ export default function Home() {
   return (
     <div className="bg-cream overflow-x-hidden">
 
-      {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1800&q=85"
-          alt=""
+      {/* ── HERO: video only ── */}
+      <section className="relative h-screen overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="https://res.cloudinary.com/dttc5xk1h/video/upload/so_0/v1776607607/download_ogncot.jpg"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/50 via-forest-900/55 to-forest-900/80" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent" />
+        >
+          <source
+            src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776607607/download_ogncot.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 bg-forest-900/35" />
+        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-cream to-transparent" />
+      </section>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-20 pb-44 w-full">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 border border-white/20 bg-white/10 backdrop-blur-sm text-cream/90 text-xs font-medium px-3 py-1.5 rounded-full mb-8"
-          >
-            <Leaf size={11} className="text-sage" />
-            Organic Food Specialists · Est. London
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-serif text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[1.0] mb-6"
-          >
-            Good Food.<br />
-            <span className="text-honey">Good Life.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-forest-100 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl mx-auto"
-          >
-            Whether you&apos;re starting your wellness journey or a seasoned health enthusiast —
-            Village Organic is your home. Three London stores and delivery nationwide.
-          </motion.p>
-
+      {/* ── SHOP NOW (below hero) ── */}
+      <section className="bg-cream pt-4 pb-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex flex-wrap gap-4 justify-center"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
-            <a
-              href="https://wholefoodsbox.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2.5 bg-honey text-bark font-semibold px-7 py-4 rounded-full hover:bg-amber-400 transition-all hover:scale-105 shadow-xl shadow-black/20"
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-5"
             >
-              <ShoppingBag size={18} />
-              Shop Online
-            </a>
-            <Link
-              href="/stores"
-              className="flex items-center gap-2.5 bg-white/10 border border-white/30 backdrop-blur-sm text-cream font-medium px-7 py-4 rounded-full hover:bg-white/20 transition-all"
-            >
-              <MapPin size={16} />
-              Find a Store
-            </Link>
+              <Leaf size={11} />
+              Organic Food Specialists · Est. London
+            </motion.div>
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-forest-900 leading-[1.05] mb-6">
+              Good Food.<br />
+              <span className="text-honey">Good Life.</span>
+            </h1>
+            <p className="text-earth text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+              Whether you&apos;re starting your wellness journey or a seasoned health enthusiast —
+              Village Organic is your home. Three London stores and delivery nationwide.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a
+                href="https://wholefoodsbox.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 bg-forest-700 text-cream font-semibold px-7 py-4 rounded-full hover:bg-forest-600 transition-all hover:scale-105 shadow-lg"
+              >
+                <ShoppingBag size={18} />
+                Shop Now
+              </a>
+              <Link
+                href="/stores"
+                className="flex items-center gap-2.5 border border-forest-300 text-bark font-medium px-7 py-4 rounded-full hover:border-forest-500 hover:text-forest-700 transition-all"
+              >
+                <MapPin size={16} />
+                Find a Store
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* ── TRUST BADGES ── */}
-      <section className="bg-cream pt-2 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <section className="bg-parchment py-10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8">
             {trustBadges.map((b, i) => (
               <motion.div
                 key={b.label}
@@ -184,14 +183,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex flex-col sm:flex-row items-center sm:items-start gap-3 text-center sm:text-left"
+                className="flex flex-col items-center text-center gap-2"
               >
-                <div className="w-11 h-11 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center">
                   {b.icon}
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-bark">{b.label}</p>
-                  <p className="text-xs text-earth mt-0.5">{b.sub}</p>
+                  <p className="font-semibold text-xs sm:text-sm text-bark">{b.label}</p>
+                  <p className="text-[11px] sm:text-xs text-earth mt-0.5">{b.sub}</p>
                 </div>
               </motion.div>
             ))}
@@ -200,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* ── CATEGORIES ── */}
-      <section className="bg-cream pb-28">
+      <section className="bg-cream py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Section>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -226,7 +225,7 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${cat.accent} via-transparent to-transparent`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <p className="font-serif font-bold text-cream text-sm sm:text-base leading-tight">{cat.label}</p>
                     <p className="text-cream/70 text-xs mt-0.5 leading-snug">{cat.sub}</p>
