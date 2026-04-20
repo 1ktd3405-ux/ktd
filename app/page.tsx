@@ -26,72 +26,75 @@ const categories = [
     id: "fresh",
     label: "Fresh Foods",
     sub: "Fruits, Vegetables & Exotics",
-    img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643965/fresh_f_xws3qj.jpg",
     href: "https://wholefoodsbox.co.uk/collections/fresh-foods",
-    accent: "from-green-900/80",
+    accent: "from-green-900/70",
   },
   {
     id: "chilled",
     label: "Chilled Foods",
     sub: "Dairy, Meat & Ready Meals",
-    img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643965/chilled_foods_rbdqeh.jpg",
     href: "https://wholefoodsbox.co.uk/collections/chilled-foods",
-    accent: "from-blue-900/80",
+    accent: "from-blue-900/70",
   },
   {
     id: "frozen",
     label: "Frozen Foods",
     sub: "Ice Cream, Meals & Plant-Based",
-    img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/frozen_ffods_cj69rx.jpg",
     href: "https://wholefoodsbox.co.uk/collections/frozen-foods",
-    accent: "from-cyan-900/80",
+    accent: "from-cyan-900/70",
   },
   {
     id: "cupboard",
     label: "Food Cupboard",
     sub: "Pantry Staples, Snacks & Cereals",
-    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643963/foot_cupboard_eofyqp.jpg",
     href: "https://wholefoodsbox.co.uk/collections/food-drink",
-    accent: "from-amber-900/80",
+    accent: "from-amber-900/70",
   },
   {
     id: "health",
     label: "Health & Wellbeing",
     sub: "Supplements & Wellness",
-    img: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/health_wwell_b_uwdwmg.jpg",
     href: "https://wholefoodsbox.co.uk/collections/health-beauty",
-    accent: "from-emerald-900/80",
+    accent: "from-emerald-900/70",
   },
   {
     id: "beauty",
     label: "Beauty & Personal Care",
     sub: "Skin, Hair & Dental Care",
-    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/personal_care_jl9gts.jpg",
     href: "https://wholefoodsbox.co.uk/collections/beauty-personal-care",
-    accent: "from-rose-900/80",
+    accent: "from-rose-900/70",
   },
   {
     id: "household",
     label: "Household & Pets",
     sub: "Cleaning, Kitchen & Pets",
-    img: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/household_cleaning_xpditn.jpg",
     href: "https://wholefoodsbox.co.uk/collections/household-pets",
-    accent: "from-orange-900/80",
+    accent: "from-orange-900/70",
   },
   {
     id: "beverages",
     label: "Beverages",
     sub: "Tea, Coffee, Juices & More",
-    img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/beverages_p5woyg.jpg",
     href: "https://wholefoodsbox.co.uk/collections/soft-drinks-teas-coffee",
-    accent: "from-yellow-900/80",
+    accent: "from-yellow-900/70",
   },
 ];
 
+const LOGO_VILLAGE_ORGANIC = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
+const LOGO_VILLAGE_WHOLEFOODS = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776641488/Gemini_Generated_Image_dtqyoqdtqyoqdtqy_ybiznv.png";
+
 const stores = [
-  { name: "Victoria Park", address: "91 Lauriston Road", postcode: "London E9 7HJ" },
-  { name: "Clapham Common", address: "9 The Pavement", postcode: "London SW4 0HY" },
-  { name: "Caledonian Road", address: "210 Caledonian Road", postcode: "London N1 0SQ" },
+  { name: "Victoria Park", address: "91 Lauriston Road", postcode: "London E9 7HJ", logo: LOGO_VILLAGE_ORGANIC },
+  { name: "Clapham Common", address: "9 The Pavement", postcode: "London SW4 0HY", logo: LOGO_VILLAGE_WHOLEFOODS },
+  { name: "Caledonian Road", address: "210 Caledonian Road", postcode: "London N1 0SQ", logo: LOGO_VILLAGE_WHOLEFOODS },
 ];
 
 export default function Home() {
@@ -104,7 +107,7 @@ export default function Home() {
           autoPlay
           muted
           playsInline
-          className="w-full block"
+          className="w-full max-h-[75vh] object-contain"
         >
           <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
         </video>
@@ -279,9 +282,9 @@ export default function Home() {
                   className="bg-parchment border border-forest-100 rounded-2xl p-7 hover:border-forest-300 hover:shadow-lg transition-all"
                 >
                   <img
-                    src="https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png"
-                    alt="Village Organic"
-                    className="w-14 h-14 rounded-full object-contain mb-5"
+                    src={store.logo}
+                    alt={store.name}
+                    className="w-20 h-20 rounded-full object-contain mb-5"
                   />
                   <p className="text-xs font-semibold text-sage tracking-widest uppercase mb-2">Store {i + 1}</p>
                   <h3 className="font-serif text-xl font-bold text-forest-900 mb-2">{store.name}</h3>
