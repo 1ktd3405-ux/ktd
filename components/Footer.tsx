@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { Leaf, MapPin, Phone, Mail, Share2, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Share2, Globe } from "lucide-react";
+
+const LOGO_URL = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
 
 const stores = [
   { name: "Victoria Park", address: "91 Lauriston Road, London E9 7HJ" },
@@ -26,18 +28,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-forest-600 flex items-center justify-center">
-                <Leaf size={18} className="text-cream" />
-              </div>
-              <div>
-                <span className="font-serif font-bold text-lg leading-none block">
-                  Village Organic
-                </span>
-                <span className="text-[10px] text-sage tracking-widest uppercase">
-                  Est. London
-                </span>
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src={LOGO_URL}
+                alt="Village Organic"
+                className="w-12 h-12 rounded-full object-contain"
+              />
+              <span className="font-serif font-bold text-xl leading-none">
+                Village Organic
+              </span>
             </div>
             <p className="text-sm text-forest-200 leading-relaxed mb-6">
               Whether you're flirting with the idea of getting healthy or you're a master — we are sure to have what you're looking for.

@@ -73,14 +73,9 @@ export default function Navbar() {
                 <Leaf size={22} className="text-cream" />
               </div>
             )}
-            <div>
-              <span className="font-serif font-bold text-lg md:text-xl text-forest-800 leading-none block">
-                Village Organic
-              </span>
-              <span className="text-[10px] text-sage tracking-widest uppercase font-sans">
-                Est. London
-              </span>
-            </div>
+            <span className="font-serif font-bold text-lg md:text-xl text-forest-800 leading-none">
+              Village Organic
+            </span>
           </Link>
 
           {/* Desktop nav */}

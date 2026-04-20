@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* ── CATEGORIES ── */}
-      <section className="bg-cream pt-4 pb-24">
+      <section className="bg-cream pt-4 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Section>
             <motion.div variants={fadeUp} className="text-center mb-12">
@@ -198,11 +198,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gradient bridge: cream → forest */}
-      <div className="h-20 bg-gradient-to-b from-cream to-[#2d4520]" />
-
       {/* ── ABOUT BANNER ── */}
-      <section className="relative bg-[#2d4520] py-24 overflow-hidden">
+      <section
+        className="relative bg-[#2d4520] pt-28 pb-24 overflow-hidden"
+        style={{ clipPath: "polygon(0 60px, 100% 0, 100% 100%, 0 100%)" }}
+      >
         <div
           className="absolute inset-0 pointer-events-none opacity-10"
           style={{
@@ -278,9 +278,11 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 250 }}
                   className="bg-parchment border border-forest-100 rounded-2xl p-7 hover:border-forest-300 hover:shadow-lg transition-all"
                 >
-                  <div className="w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center text-forest-700 mb-5">
-                    <MapPin size={22} />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png"
+                    alt="Village Organic"
+                    className="w-14 h-14 rounded-full object-contain mb-5"
+                  />
                   <p className="text-xs font-semibold text-sage tracking-widest uppercase mb-2">Store {i + 1}</p>
                   <h3 className="font-serif text-xl font-bold text-forest-900 mb-2">{store.name}</h3>
                   <p className="text-earth text-sm">{store.address}</p>
