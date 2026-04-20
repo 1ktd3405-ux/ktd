@@ -124,8 +124,10 @@ export default function Home() {
             >
               <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
             </video>
-            {/* Mobile: fade into cream; desktop: fade into left panel */}
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream lg:from-forest-950 to-transparent pointer-events-none" />
+            {/* Mobile: fade bottom into cream */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent pointer-events-none lg:hidden" />
+            {/* Desktop: soften left edge into text panel */}
+            <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-forest-950 to-transparent pointer-events-none hidden lg:block" />
           </div>
 
           {/* Text column — bottom on mobile, LEFT on desktop */}
@@ -162,6 +164,19 @@ export default function Home() {
                   Find a Store
                 </Link>
               </div>
+
+              {/* Desktop-only stats */}
+              <div className="hidden lg:flex items-center gap-8 mt-8 pt-6 border-t border-forest-700/50">
+                <div>
+                  <p className="font-serif text-3xl font-bold text-honey">3</p>
+                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">London Stores</p>
+                </div>
+                <div className="w-px h-10 bg-forest-700/60" />
+                <div>
+                  <p className="font-serif text-3xl font-bold text-honey">1000+</p>
+                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">Organic Products</p>
+                </div>
+              </div>
             </motion.div>
           </div>
 
@@ -195,10 +210,10 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${cat.accent} via-transparent to-transparent`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="font-serif font-bold text-cream text-sm sm:text-base leading-tight">{cat.label}</p>
-                    <p className="text-cream/70 text-xs mt-0.5 leading-snug">{cat.sub}</p>
+                    <p className="font-serif font-bold text-white text-base sm:text-lg leading-tight drop-shadow-md">{cat.label}</p>
+                    <p className="text-white/75 text-xs sm:text-sm mt-1 leading-snug">{cat.sub}</p>
                     <div className="flex items-center gap-1 text-honey text-xs font-medium mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       Shop now <ArrowRight size={11} />
                     </div>
@@ -210,11 +225,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gradient bridge: cream → forest */}
+      <div className="h-16 bg-gradient-to-b from-cream to-[#2d4520]" />
+
       {/* ── ABOUT BANNER ── */}
-      <section
-        className="relative bg-[#2d4520] pt-28 pb-24 overflow-hidden"
-        style={{ clipPath: "polygon(0 60px, 100% 0, 100% 100%, 0 100%)" }}
-      >
+      <section className="relative bg-[#2d4520] pt-16 pb-20 overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-10"
           style={{
@@ -222,7 +237,7 @@ export default function Home() {
               "radial-gradient(circle at 70% 50%, #8B9D5C 0%, transparent 60%), radial-gradient(circle at 20% 80%, #D4A853 0%, transparent 50%)",
           }}
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <Section>
             <motion.p variants={fadeUp} className="text-sage text-sm font-medium tracking-widest uppercase mb-4">
               Our Story
@@ -248,29 +263,11 @@ export default function Home() {
               </Link>
             </motion.div>
           </Section>
-
-          <Section className="grid grid-cols-2 gap-4">
-            {[
-              { num: "3", label: "London Stores" },
-              { num: "500+", label: "Organic Products" },
-              { num: "£60", label: "Free Delivery Over" },
-              { num: "100%", label: "Certified Organic" },
-            ].map((stat) => (
-              <motion.div
-                key={stat.label}
-                variants={fadeUp}
-                className="bg-forest-700/40 border border-forest-600/40 rounded-2xl p-6 text-center"
-              >
-                <p className="font-serif text-4xl font-bold text-honey mb-2">{stat.num}</p>
-                <p className="text-forest-200 text-sm">{stat.label}</p>
-              </motion.div>
-            ))}
-          </Section>
         </div>
       </section>
 
       {/* Gradient bridge: forest → cream */}
-      <div className="h-20 bg-gradient-to-b from-[#2d4520] to-cream" />
+      <div className="h-16 bg-gradient-to-b from-[#2d4520] to-cream" />
 
       {/* ── OUR STORES ── */}
       <section className="bg-cream pb-24">
