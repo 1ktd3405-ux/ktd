@@ -36,9 +36,8 @@ const stores = [
     phone: "020 8985 8008",
     email: "info@villageorganic.co.uk",
     hours: [
-      { day: "Monday – Friday", time: "8:00am – 8:00pm" },
-      { day: "Saturday", time: "8:00am – 7:00pm" },
-      { day: "Sunday", time: "10:00am – 6:00pm" },
+      { day: "Monday – Saturday", time: "7:00am – 10:00pm" },
+      { day: "Sunday", time: "8:00am – 10:00pm" },
     ],
     description:
       "Our flagship Victoria Park store is a much-loved gem in the heart of Hackney. Packed with fresh produce, organic groceries, and a warm community atmosphere.",
@@ -56,9 +55,8 @@ const stores = [
     phone: "020 8985 8008",
     email: "info@villageorganic.co.uk",
     hours: [
-      { day: "Monday – Friday", time: "8:00am – 8:00pm" },
-      { day: "Saturday", time: "8:00am – 7:00pm" },
-      { day: "Sunday", time: "10:00am – 6:00pm" },
+      { day: "Monday – Saturday", time: "7:00am – 10:00pm" },
+      { day: "Sunday", time: "8:00am – 10:00pm" },
     ],
     description:
       "Right on The Pavement facing Clapham Common, this vibrant store serves south London's growing community of health-conscious shoppers.",
@@ -76,9 +74,8 @@ const stores = [
     phone: "020 8985 8008",
     email: "info@villageorganic.co.uk",
     hours: [
-      { day: "Monday – Friday", time: "8:00am – 8:00pm" },
-      { day: "Saturday", time: "8:00am – 7:00pm" },
-      { day: "Sunday", time: "10:00am – 6:00pm" },
+      { day: "Monday – Saturday", time: "7:00am – 10:00pm" },
+      { day: "Sunday", time: "8:00am – 10:00pm" },
     ],
     description:
       "Our Islington store on Caledonian Road brings organic goodness to north London, with a carefully curated range for the local community.",
@@ -202,7 +199,7 @@ export default function StoresPage() {
                         <Clock size={16} />
                         <p className="font-semibold text-sm">Opening Hours</p>
                       </div>
-                      <div className="grid sm:grid-cols-3 gap-3">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         {store.hours.map((h) => (
                           <div key={h.day} className="bg-cream rounded-xl p-4 border border-forest-100">
                             <p className="text-xs text-earth font-medium mb-1">{h.day}</p>

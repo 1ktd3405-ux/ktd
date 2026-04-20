@@ -88,7 +88,7 @@ const categories = [
     id: "baby",
     label: "Baby & Parent",
     sub: "Organic formula, natural snacks and gentle baby care",
-    img: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776645492/baby_bpsndw.jpg",
     subcats: ["Formula Milk", "Snacks", "Nappies & Wipes"],
     href: "https://wholefoodsbox.co.uk/collections/baby-parent-kids",
     accent: "from-purple-900/70",

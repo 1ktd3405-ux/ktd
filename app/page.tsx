@@ -166,7 +166,7 @@ export default function Home() {
               </div>
 
               {/* Desktop-only stats */}
-              <div className="hidden lg:flex items-center gap-8 mt-8 pt-6 border-t border-forest-700/50">
+              <div className="hidden lg:flex items-center gap-6 mt-8 pt-6 border-t border-forest-700/50 flex-wrap">
                 <div>
                   <p className="font-serif text-3xl font-bold text-honey">3</p>
                   <p className="text-forest-300 text-xs tracking-wide mt-0.5">London Stores</p>
@@ -175,6 +175,11 @@ export default function Home() {
                 <div>
                   <p className="font-serif text-3xl font-bold text-honey">1000+</p>
                   <p className="text-forest-300 text-xs tracking-wide mt-0.5">Organic Products</p>
+                </div>
+                <div className="w-px h-10 bg-forest-700/60" />
+                <div>
+                  <p className="font-serif text-3xl font-bold text-honey">Free</p>
+                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">UK Delivery £60+</p>
                 </div>
               </div>
             </motion.div>
