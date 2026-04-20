@@ -140,7 +140,7 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-5">
                 <Leaf size={11} />
-                Organic Food Specialists · Est. London
+                Organic Food Specialists
               </div>
               <h1 className="font-serif text-5xl xl:text-6xl font-bold text-forest-900 lg:text-cream leading-[1.05] mb-8">
                 Good Food.<br />
