@@ -20,11 +20,15 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
   );
 }
 
+const LOGO_VILLAGE_ORGANIC = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
+const LOGO_VILLAGE_WHOLEFOODS = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776641488/Gemini_Generated_Image_dtqyoqdtqyoqdtqy_ybiznv.png";
+
 const stores = [
   {
     id: 1,
     brand: "village organic",
     name: "Victoria Park",
+    logo: LOGO_VILLAGE_ORGANIC,
     address: "91 Lauriston Road",
     city: "London",
     postcode: "E9 7HJ",
@@ -38,13 +42,13 @@ const stores = [
     ],
     description:
       "Our flagship Victoria Park store is a much-loved gem in the heart of Hackney. Packed with fresh produce, organic groceries, and a warm community atmosphere.",
-    emoji: "🌳",
     mapQuery: "91 Lauriston Road, London E9 7HJ",
   },
   {
     id: 2,
     brand: "village wholefoods",
     name: "Clapham Common",
+    logo: LOGO_VILLAGE_WHOLEFOODS,
     address: "9 The Pavement",
     city: "London",
     postcode: "SW4 0HY",
@@ -58,13 +62,13 @@ const stores = [
     ],
     description:
       "Right on The Pavement facing Clapham Common, this vibrant store serves south London's growing community of health-conscious shoppers.",
-    emoji: "🏞️",
     mapQuery: "9 The Pavement, London SW4 0HY",
   },
   {
     id: 3,
     brand: "village wholefoods",
     name: "Caledonian Road",
+    logo: LOGO_VILLAGE_WHOLEFOODS,
     address: "210 Caledonian Road",
     city: "London",
     postcode: "N1 0SQ",
@@ -78,7 +82,6 @@ const stores = [
     ],
     description:
       "Our Islington store on Caledonian Road brings organic goodness to north London, with a carefully curated range for the local community.",
-    emoji: "🏙️",
     mapQuery: "210 Caledonian Road, London N1 0SQ",
   },
 ];
@@ -141,9 +144,13 @@ export default function StoresPage() {
                       }}
                     />
                     <div className="relative z-10">
-                      <p className="text-sage text-xs font-semibold tracking-widest uppercase mb-2">{store.brand}</p>
-                      <div className="text-5xl mb-4">{store.emoji}</div>
-                      <h2 className="font-serif text-3xl font-bold text-cream mb-2">{store.name}</h2>
+                      <p className="text-sage text-xs font-semibold tracking-widest uppercase mb-4">{store.brand}</p>
+                      <img
+                        src={store.logo}
+                        alt={store.name}
+                        className="w-20 h-20 rounded-full object-contain mb-5"
+                      />
+                      <h2 className="font-serif text-4xl lg:text-5xl font-bold text-cream mb-2 leading-tight">{store.name}</h2>
                       <p className="text-forest-300 text-sm mb-6">{store.area}, London</p>
                       <p className="text-forest-200 leading-relaxed text-sm">{store.description}</p>
                     </div>

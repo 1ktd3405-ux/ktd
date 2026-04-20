@@ -61,6 +61,7 @@ const categories = [
     img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/health_wwell_b_uwdwmg.jpg",
     href: "https://wholefoodsbox.co.uk/collections/health-beauty",
     accent: "from-emerald-900/70",
+    hideOnMobile: true,
   },
   {
     id: "beauty",
@@ -113,8 +114,8 @@ export default function Home() {
       <section className="bg-forest-950 overflow-hidden">
         <div className="lg:flex lg:items-stretch lg:min-h-[80vh]">
 
-          {/* Video column */}
-          <div className="relative lg:w-[58%]">
+          {/* Video column — top on mobile, RIGHT on desktop */}
+          <div className="relative lg:w-1/2 lg:order-2">
             <video
               autoPlay
               muted
@@ -123,12 +124,12 @@ export default function Home() {
             >
               <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
             </video>
-            {/* Mobile: fade into cream; desktop: fade into right panel */}
+            {/* Mobile: fade into cream; desktop: fade into left panel */}
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream lg:from-forest-950 to-transparent pointer-events-none" />
           </div>
 
-          {/* Text column */}
-          <div className="lg:w-[42%] bg-cream lg:bg-forest-950 flex items-center justify-center px-8 lg:px-14 py-10 lg:py-16">
+          {/* Text column — bottom on mobile, LEFT on desktop */}
+          <div className="lg:w-1/2 lg:order-1 bg-cream lg:bg-forest-950 flex items-center justify-center px-8 lg:px-14 py-10 lg:py-16">
             <motion.div
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
@@ -186,7 +187,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer shadow-sm hover:shadow-xl transition-shadow"
+                  className={`group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer shadow-sm hover:shadow-xl transition-shadow${cat.hideOnMobile ? " hidden sm:block" : ""}`}
                 >
                   <img
                     src={cat.img}
