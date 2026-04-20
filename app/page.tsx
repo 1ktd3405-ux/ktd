@@ -26,7 +26,7 @@ const categories = [
     id: "fresh",
     label: "Fresh Foods",
     sub: "Fruits, Vegetables & Exotics",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643965/fresh_f_xws3qj.jpg",
+    img: "/images/fresh.jpg",
     href: "https://wholefoodsbox.co.uk/collections/fresh-foods",
     accent: "from-green-900/70",
   },
@@ -34,7 +34,7 @@ const categories = [
     id: "chilled",
     label: "Chilled Foods",
     sub: "Dairy, Meat & Ready Meals",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643965/chilled_foods_rbdqeh.jpg",
+    img: "/images/chilled-foods.jpg",
     href: "https://wholefoodsbox.co.uk/collections/chilled-foods",
     accent: "from-blue-900/70",
   },
@@ -42,7 +42,7 @@ const categories = [
     id: "frozen",
     label: "Frozen Foods",
     sub: "Ice Cream, Meals & Plant-Based",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/frozen_ffods_cj69rx.jpg",
+    img: "/images/frozen-foods.jpg",
     href: "https://wholefoodsbox.co.uk/collections/frozen-foods",
     accent: "from-cyan-900/70",
   },
@@ -50,7 +50,7 @@ const categories = [
     id: "cupboard",
     label: "Food Cupboard",
     sub: "Pantry Staples, Snacks & Cereals",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643963/foot_cupboard_eofyqp.jpg",
+    img: "/images/cupboard.jpg",
     href: "https://wholefoodsbox.co.uk/collections/food-drink",
     accent: "from-amber-900/70",
   },
@@ -58,7 +58,7 @@ const categories = [
     id: "health",
     label: "Health & Wellbeing",
     sub: "Supplements & Wellness",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/health_wwell_b_uwdwmg.jpg",
+    img: "/images/health-wellness.jpg",
     href: "https://wholefoodsbox.co.uk/collections/health-beauty",
     accent: "from-emerald-900/70",
     hideOnMobile: true,
@@ -67,7 +67,7 @@ const categories = [
     id: "beauty",
     label: "Beauty & Personal Care",
     sub: "Skin, Hair & Dental Care",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/personal_care_jl9gts.jpg",
+    img: "/images/personal-care.jpg",
     href: "https://wholefoodsbox.co.uk/collections/beauty-personal-care",
     accent: "from-rose-900/70",
   },
@@ -75,7 +75,7 @@ const categories = [
     id: "household",
     label: "Household & Pets",
     sub: "Cleaning, Kitchen & Pets",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/household_cleaning_xpditn.jpg",
+    img: "/images/household-cleaning.jpg",
     href: "https://wholefoodsbox.co.uk/collections/household-pets",
     accent: "from-orange-900/70",
   },
@@ -83,7 +83,7 @@ const categories = [
     id: "beverages",
     label: "Beverages",
     sub: "Tea, Coffee, Juices & More",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776643964/beverages_p5woyg.jpg",
+    img: "/images/beverages.jpg",
     href: "https://wholefoodsbox.co.uk/collections/soft-drinks-teas-coffee",
     accent: "from-yellow-900/70",
   },
@@ -91,14 +91,14 @@ const categories = [
     id: "baby",
     label: "Baby & Parent",
     sub: "Formula, Snacks & Baby Care",
-    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776645492/baby_bpsndw.jpg",
+    img: "/images/baby.jpg",
     href: "https://wholefoodsbox.co.uk/collections/baby-parent-kids",
     accent: "from-purple-900/70",
   },
 ];
 
-const LOGO_VILLAGE_ORGANIC = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
-const LOGO_VILLAGE_WHOLEFOODS = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776641488/Gemini_Generated_Image_dtqyoqdtqyoqdtqy_ybiznv.png";
+const LOGO_VILLAGE_ORGANIC = "/images/logo-village-organic.png";
+const LOGO_VILLAGE_WHOLEFOODS = "/images/logo-village-wholefoods.png";
 
 const stores = [
   { name: "Victoria Park", address: "91 Lauriston Road", postcode: "London E9 7HJ", logo: LOGO_VILLAGE_ORGANIC },
@@ -122,7 +122,7 @@ export default function Home() {
               playsInline
               className="w-full max-h-[70vh] lg:max-h-none lg:h-full object-contain lg:object-cover"
             >
-              <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
+              <source src="/videos/hero.mp4" type="video/mp4" />
             </video>
             {/* Mobile: fade bottom into cream */}
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent pointer-events-none lg:hidden" />

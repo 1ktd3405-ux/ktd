@@ -20,8 +20,8 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
   );
 }
 
-const LOGO_VILLAGE_ORGANIC = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
-const LOGO_VILLAGE_WHOLEFOODS = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776641488/Gemini_Generated_Image_dtqyoqdtqyoqdtqy_ybiznv.png";
+const LOGO_VILLAGE_ORGANIC = "/images/logo-village-organic.png";
+const LOGO_VILLAGE_WHOLEFOODS = "/images/logo-village-wholefoods.png";
 
 const stores = [
   {
