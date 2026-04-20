@@ -86,6 +86,14 @@ const categories = [
     href: "https://wholefoodsbox.co.uk/collections/soft-drinks-teas-coffee",
     accent: "from-yellow-900/70",
   },
+  {
+    id: "baby",
+    label: "Baby & Parent",
+    sub: "Formula, Snacks & Baby Care",
+    img: "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776645492/baby_bpsndw.jpg",
+    href: "https://wholefoodsbox.co.uk/collections/baby-parent-kids",
+    accent: "from-purple-900/70",
+  },
 ];
 
 const LOGO_VILLAGE_ORGANIC = "https://res.cloudinary.com/dttc5xk1h/image/upload/v1776608184/ChatGPT_Image_Apr_19_2026_05_07_54_PM_gsa8fh.png";
@@ -101,61 +109,61 @@ export default function Home() {
   return (
     <div className="bg-cream overflow-x-hidden">
 
-      {/* ── HERO: video only, no crop ── */}
-      <section className="relative bg-forest-950 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          playsInline
-          className="w-full max-h-[75vh] object-contain"
-        >
-          <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent pointer-events-none" />
-      </section>
+      {/* ── HERO: video left + tagline right (desktop) / stacked (mobile) ── */}
+      <section className="bg-forest-950 overflow-hidden">
+        <div className="lg:flex lg:items-stretch lg:min-h-[80vh]">
 
-      {/* ── SHOP NOW (below hero) ── */}
-      <section className="bg-cream pt-8 pb-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-4"
+          {/* Video column */}
+          <div className="relative lg:w-[58%]">
+            <video
+              autoPlay
+              muted
+              playsInline
+              className="w-full max-h-[70vh] lg:max-h-none lg:h-full object-contain lg:object-cover"
             >
-              <Leaf size={11} />
-              Organic Food Specialists · Est. London
+              <source src="https://res.cloudinary.com/dttc5xk1h/video/upload/v1776634518/document_5992369166294719168_a7vind.mp4" type="video/mp4" />
+            </video>
+            {/* Mobile: fade into cream; desktop: fade into right panel */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream lg:from-forest-950 to-transparent pointer-events-none" />
+          </div>
+
+          {/* Text column */}
+          <div className="lg:w-[42%] bg-cream lg:bg-forest-950 flex items-center justify-center px-8 lg:px-14 py-10 lg:py-16">
+            <motion.div
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="max-w-sm w-full"
+            >
+              <div className="inline-flex items-center gap-2 text-sage text-xs font-medium tracking-widest uppercase mb-5">
+                <Leaf size={11} />
+                Organic Food Specialists · Est. London
+              </div>
+              <h1 className="font-serif text-5xl xl:text-6xl font-bold text-forest-900 lg:text-cream leading-[1.05] mb-8">
+                Good Food.<br />
+                <span className="text-honey">Good Life.</span>
+              </h1>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://wholefoodsbox.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 bg-forest-700 text-cream font-semibold px-7 py-4 rounded-full hover:bg-forest-600 transition-all hover:scale-105 shadow-lg"
+                >
+                  <ShoppingBag size={18} />
+                  Shop Now
+                </a>
+                <Link
+                  href="/stores"
+                  className="flex items-center gap-2.5 border border-forest-300 lg:border-forest-500 text-bark lg:text-cream font-medium px-7 py-4 rounded-full hover:border-forest-500 hover:text-forest-700 lg:hover:text-sage transition-all"
+                >
+                  <MapPin size={16} />
+                  Find a Store
+                </Link>
+              </div>
             </motion.div>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-forest-900 leading-[1.05] mb-6">
-              Good Food.<br />
-              <span className="text-honey">Good Life.</span>
-            </h1>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="https://wholefoodsbox.co.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 bg-forest-700 text-cream font-semibold px-7 py-4 rounded-full hover:bg-forest-600 transition-all hover:scale-105 shadow-lg"
-              >
-                <ShoppingBag size={18} />
-                Shop Now
-              </a>
-              <Link
-                href="/stores"
-                className="flex items-center gap-2.5 border border-forest-300 text-bark font-medium px-7 py-4 rounded-full hover:border-forest-500 hover:text-forest-700 transition-all"
-              >
-                <MapPin size={16} />
-                Find a Store
-              </Link>
-            </div>
-          </motion.div>
+          </div>
+
         </div>
       </section>
 
@@ -168,7 +176,7 @@ export default function Home() {
               <h2 className="font-serif text-4xl sm:text-5xl font-bold text-forest-900">Shop By Category</h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
               {categories.map((cat) => (
                 <motion.a
                   key={cat.id}
