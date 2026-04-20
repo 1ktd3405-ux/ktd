@@ -235,7 +235,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2.5 bg-forest-700 text-cream font-semibold px-8 py-4 rounded-full hover:bg-forest-600 transition-all hover:scale-105 shadow-md"
               >
                 <ShoppingBag size={16} />
-                Tüm Kategoriler
+                All Categories
                 <ArrowRight size={15} />
               </a>
             </motion.div>
