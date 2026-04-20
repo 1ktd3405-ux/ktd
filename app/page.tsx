@@ -226,6 +226,19 @@ export default function Home() {
                 </motion.a>
               ))}
             </div>
+
+            <motion.div variants={fadeUp} className="text-center mt-10">
+              <a
+                href="https://wholefoodsbox.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-forest-700 text-cream font-semibold px-8 py-4 rounded-full hover:bg-forest-600 transition-all hover:scale-105 shadow-md"
+              >
+                <ShoppingBag size={16} />
+                Tüm Kategoriler
+                <ArrowRight size={15} />
+              </a>
+            </motion.div>
           </Section>
         </div>
       </section>
