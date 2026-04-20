@@ -165,21 +165,21 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Desktop-only stats */}
-              <div className="hidden lg:flex items-center gap-6 mt-8 pt-6 border-t border-forest-700/50 flex-wrap">
-                <div>
-                  <p className="font-serif text-3xl font-bold text-honey">3</p>
-                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">London Stores</p>
+              {/* Stats — mobile + desktop */}
+              <div className="flex items-center gap-4 mt-6 lg:mt-8 pt-5 lg:pt-6 border-t border-forest-200 lg:border-forest-700/50">
+                <div className="shrink-0">
+                  <p className="font-serif text-2xl lg:text-3xl font-bold text-honey">3</p>
+                  <p className="text-forest-600 lg:text-forest-300 text-[11px] tracking-wide mt-0.5 whitespace-nowrap">London Stores</p>
                 </div>
-                <div className="w-px h-10 bg-forest-700/60" />
-                <div>
-                  <p className="font-serif text-3xl font-bold text-honey">1000+</p>
-                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">Organic Products</p>
+                <div className="w-px h-9 bg-forest-200 lg:bg-forest-700/60 shrink-0" />
+                <div className="shrink-0">
+                  <p className="font-serif text-2xl lg:text-3xl font-bold text-honey">1000+</p>
+                  <p className="text-forest-600 lg:text-forest-300 text-[11px] tracking-wide mt-0.5 whitespace-nowrap">Organic Products</p>
                 </div>
-                <div className="w-px h-10 bg-forest-700/60" />
-                <div>
-                  <p className="font-serif text-3xl font-bold text-honey">Free</p>
-                  <p className="text-forest-300 text-xs tracking-wide mt-0.5">UK Delivery £60+</p>
+                <div className="w-px h-9 bg-forest-200 lg:bg-forest-700/60 shrink-0" />
+                <div className="shrink-0">
+                  <p className="font-serif text-2xl lg:text-3xl font-bold text-honey">Free</p>
+                  <p className="text-forest-600 lg:text-forest-300 text-[11px] tracking-wide mt-0.5 whitespace-nowrap">UK Delivery £60+</p>
                 </div>
               </div>
             </motion.div>
